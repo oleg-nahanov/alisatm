@@ -273,25 +273,30 @@
 				<div class="center">
 					<svg style="width: 400px; height:30px;"><use xlink:href="#line"></use></svg>
 				</div>
-<div style="position: absolute">
-				<div class="c-item"><span class="ico icon-c1"></span><p>Телефония</p></div>
-				<div class="c-item"><span class="ico icon-c2"></span><p>Почта</p></div>
-				<div class="c-item"><span class="ico icon-c3"></span><p>Финансовый учёт</p></div>
-				<div class="c-item"><span class="ico icon-c4"></span><p>Контроль задач</p></div>
-				<div class="c-item"><span class="ico icon-c5"></span><p>Ограничение доступа</p></div>
-				<div class="c-item"><span class="ico icon-c6"></span><p>Контроль продаж</p></div>
 
-				<div class="c-item"><span class="ico icon-c7"></span><p>Бизнес-процессы в одном окне</p></div>
-				<div class="c-item"><span class="ico icon-c8"></span><p>Автоформирование документов</p></div>
-				<div class="c-item"><span class="ico icon-c9"></span><p>Быстрый калькулятрор расчета стоимости</p></div>
-				<div class="c-item"><span class="ico icon-c10"></span><p>Сохранность базы данных</p></div>
-				<div class="c-item"><span class="ico icon-c11"></span><p>Статистика и аналитика</p></div>
-</div>
 				<div class="circle">
+					<div class="c-item"><span class="ico icon-c5"></span><p>Ограничение<br>доступа</p></div>
+					<div class="c-item"><span class="ico icon-c11"></span><p>Контроль задач</p></div>
+					<div class="c-item"></div>
+					<div class="c-item"><span class="ico icon-c3"></span><p>Финансовый учёт</p></div>
+					<div class="c-item"><span class="ico icon-c2"></span><p>Почта</p></div>
+					<div class="c-item"><span class="ico icon-c1"></span><p>Телефония</p></div>
+					<div class="c-item"></div>
+					<div class="c-item"><span class="ico icon-c4"></span><p>Контроль продаж</p></div>
 
 					<div class="circle2">
-
+						<div class="c-item"></div>
+						<div class="c-item"><span class="ico icon-c8"></span><p>Быстрый калькулятрор<br>расчета стоимости</p></div>
+						<div class="c-item"></div>
+						<div class="c-item"><span class="ico icon-c9"></span><p>Сохранность<br>базы данных</p></div>
+						<div class="c-item"></div>
+						<div class="c-item"><span class="ico icon-c10"></span><p>Статистика и<br> аналитика</p></div>
+						<div class="c-item"></div>
+						<div class="c-item"><span class="ico icon-c6"></span><p>Бизнес-процессы <br>в одном окне</p></div>
+						<div class="c-item"><span class="ico icon-c7"></span><p>Автоформирование<br>документов</p></div>
 					</div>
+
+					<span class="icon-logo"></span>
 				</div>
 
 			</div>
@@ -323,7 +328,7 @@
 	<script src="libs/jquery/jquery.min.js"></script>
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
 	<script src="libs/particles/particles.min.js"></script>
-	<!-- <script src="libs/particles/demo/js/app.js"></script> -->
+	<script src="libs/particles/demo/js/app.js"></script>
 	<script>
 	$(function() {
 		var head = $(".header"), nav_offset_top = 40;//head.height();
@@ -356,7 +361,18 @@
 			autoWidth: false,
 			singleItem: false,
 			autoplay: false,
-			navSpeed: 800
+			navSpeed: 800,
+			responsive:{
+		        0:{
+		            items: 1
+		        },
+		        600:{
+		            items: 3
+		        },
+		        1000:{
+		            items: 5
+		        }
+		    }
     	});
 
 		tl.owlCarousel({
