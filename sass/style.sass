@@ -514,6 +514,22 @@ footer
 	&:before
 		content: '\f28b'
 
+.icon-f1
+	&:before
+		content: '\f221'
+.icon-f2
+	&:before
+		content: '\f222'
+.icon-f3
+	&:before
+		content: '\f223'
+.icon-f4
+	&:before
+		content: '\f224'
+.icon-f5
+	&:before
+		content: '\f225'
+
 		
 
 .problem
@@ -536,7 +552,11 @@ footer
 	&.white
 		color: $white
 
-#particles-js
+.pbg
+	position: relative
+	overflow: hidden
+
+.pjs, #particles-js
 	position: absolute
 	left: 0
 	top: 0
@@ -558,7 +578,7 @@ footer
 	li
 		width: 28%
 		margin: 20px
-		background: rgba(#ddd, .6)
+		background: rgba(#ddd, .4)
 		padding: 20px 20px 10px 20px
 		text-transform: uppercase
 		display: flex
@@ -585,8 +605,9 @@ footer
 			&:hover
 				background: linear-gradient(135deg, #3cb8f1 0%,#77d7f4 37%,#7eeafb 51%,#62d3f6 52%,#8adbf2 100%)
 				text-shadow: 0 0 5px #666
+				box-shadow: 0 0 20px #087cb1
 		.ico
-			font-size: 80px
+			font-size: 70px
 			color: $blue
 			margin-left: 10px
 
@@ -643,7 +664,7 @@ footer
 	clear: both
 
 .tasks
-	margin: 60px 0
+	margin: 60px
 
 .task-item
 	background: $gray-bg
@@ -700,11 +721,10 @@ footer
 .get-video, .what
 	color: $white
 	background: #000
-	padding: 80px 0
+	padding: 40px 0
 	background: url('img/main-bg.jpg') no-repeat center center
 	background-size: cover
 	position: relative
-	color: $white
 	&:before
 		content: ''
 		display: block
@@ -748,24 +768,38 @@ footer
 	padding: 60px 0
 
 .work-item
-	width: 260px
 	height: 260px
-	background: $gray
 	margin: 20px
-	box-shadow: inset 0 0 0 5px rgba($blue, 0.5)
+	border: 5px solid rgba(#3db5f0, 0.5)
 	color: #fff
 	display: flex
 	flex-direction: column
 	justify-content: flex-end
 	text-align: left
+	background-size: cover
+	position: relative
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: rgba(#0f1c37, .4)
+		z-index: 0
 	p
 		margin: 20px
 		font-size: 16px
 		line-height: 1.26
+		position: relative
+		z-index: 9
 		
 
 .circle
-	border: 3px dashed rgba($blue, 0.2)
+	background: url('img/circle.png') no-repeat center
+	background-size: 718px
+	border: 4px solid rgba($blue, 0.2)
 	border-radius: 50%
 	margin: 40px auto
 	position: relative
@@ -781,10 +815,13 @@ footer
 		height: 70px
 
 .circle2
+	background: url('img/circle.png') no-repeat center center
+	background-size: 390px 390px
+	border: 4px solid rgba($blue, 0.2)
 	position: absolute
 	left: 150px
 	top: 150px 
-	border: 3px dashed rgba($blue, 0.2)
+	
 	border-radius: 50%
 	@include on-circle(9, 380px, 60px)
 
@@ -809,3 +846,180 @@ footer
 		top: 65px
 		text-transform: uppercase
 		font-size: 12px
+
+
+.noask
+	padding: 40px 0
+	ul
+		list-style: none
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		li
+			text-align: center
+			width: 300px
+			.num
+				display: inline-block
+				width: 140px
+				height: 140px
+				border: 2px solid $blue
+				border-radius: 50%
+				font-weight: 600
+				font-size: 36px
+				line-height: 140px
+				text-align: center
+				background: $white
+				color: $blue
+			p
+				margin: 20px 40px
+				text-align: center
+				font-size: 14px
+
+.result, .vid
+	color: $white
+	background: #000
+	padding: 40px 0
+	background: url('img/blue-bg.jpg') no-repeat center center
+	background-size: cover
+	position: relative
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: rgba(#000, .5)
+		z-index: 0
+
+.r-info
+	font-size: 26px
+	span
+		font-weight: 600
+		display: block
+		color: $blue
+
+
+
+
+
+.command
+	padding: 40px 0
+	.owl-stage-outer
+		padding-bottom: 80px
+
+.owl-item
+	.emp-item
+		transform: scale(.8)
+		transition: all 0.3s ease-in-out 0.3s
+		filter: grayscale(1)
+		position: relative
+		.e-name
+			position: absolute
+			width: 100%
+			left: 0
+			bottom: 100%
+			font-size: 22px
+			background-color: $blue
+			text-align: center
+			opacity: 0
+			box-shadow: 0 0 20px $blue
+			transition: all 0.4s ease-in-out 0.4s
+			.fio
+				color: $blue
+				display: block
+		img
+			max-height: 500px
+			width: auto
+	&.active .emp-item
+		
+	&.center .emp-item
+		transform: scale(1)
+		filter: none
+		.e-name
+			opacity: 1
+			bottom: -60px
+			box-shadow: none
+			background-color: $white
+			//transition: all 0.1s linear 0
+
+.emp-nav
+	text-align: center
+	width: 400px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	position: relative
+	top: -60px
+	z-index: 999
+	.owl-prev, .owl-next
+		position: relative
+		top: 0
+		border: none !important
+		cursor: pointer
+		transform: translateY(0)
+		display: inline-block !important
+		background: $blue !important
+		text-align: center
+		width: 30px
+		height: 30px
+
+.faq
+	padding: 40px 0
+	ul.fl1
+		width: 60%
+		max-width: 800px
+		margin: 20px auto
+		list-style: none
+		li
+			display: flex
+			justify-content: start
+			align-items: center
+			align-content: center
+			background: rgba($white, 0.8)
+			cursor: pointer
+			.ico
+				color: $blue
+				font-size: 50px
+				margin-right: 40px
+			p
+				padding: 20px 10px
+				border-bottom: 2px solid $blue
+				text-transform: uppercase
+				width: 100%
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1100px)
+	nav ul li
+		margin-left: 30px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 850px)
+	nav
+		display: none
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
