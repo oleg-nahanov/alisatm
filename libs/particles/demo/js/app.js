@@ -187,7 +187,7 @@ var optionz = {
 
 //particlesJS('particles2', optionz);
 
-particlesJS('particles-js', options);
+//particlesJS('particles-js', options);
 
 //options2.particles.move.enable = false;
 
