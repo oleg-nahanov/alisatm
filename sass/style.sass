@@ -7,6 +7,7 @@
 $maxwidth: 1200px
 $white: #fff
 $blue: #3eb5f1
+$dark: #031c63
 $hover: #0ba4f1
 $brown: #31261a
 $gray: #c2c2c4
@@ -272,11 +273,12 @@ main
 	
 
 .main
-	background: #111
 	padding-top: 140px
 	padding-bottom: 60px
 	//min-height: 100vh
-	background: url('img/main-bg.jpg') no-repeat top center
+	background-color: $dark
+	background-repeat: no-repeat
+	background-position: top center
 	background-size: cover
 	position: relative
 	color: $white
@@ -408,6 +410,8 @@ main
 		opacity: 0
 		transition: opacity .2s ease
 	svg
+		width: 18px
+		height: 18px
 		position: relative
 		top: 3px
 		margin-right: 5px
@@ -451,6 +455,8 @@ main
 .center
 	text-align: center
 
+.pad
+	padding: 40px 0
 
 footer
 	display: block
@@ -473,9 +479,7 @@ footer
 				&:hover
 					color: $blue
 					text-decoration: underline
-			
-.f-nav
-	//
+
 
 .f-contact
 	button
@@ -506,7 +510,7 @@ footer
 	line-height: 0.2
 	overflow: hidden
 	span:before
-		content: '\41'
+		content: '\2e'
 		position: absolute
 		left: 0
 		top: 0
@@ -559,7 +563,6 @@ footer
 .icon-pr6
 	&:before
 		content: '\f05d'
-
 
 .icon-arrow
 	&:before
@@ -621,7 +624,6 @@ footer
 	&:before
 		content: '\f225'
 
-		
 
 .problem
 	position: relative
@@ -647,7 +649,7 @@ footer
 	position: relative
 	overflow: hidden
 
-.pjs, #particles-js
+.pjs, #pjs
 	position: absolute
 	left: 0
 	top: 0
@@ -705,9 +707,6 @@ footer
 .companies
 	margin: 0 0 40px 0
 
-.company-slider
-	
-
 .cs-wrap
 	background: $gray-bg
 	width: 90%
@@ -742,14 +741,6 @@ footer
 	font-size: 24px
 	line-height: 24px
 	color: $white
-
-
-// .r-line
-// 	display: block
-// 	width: 200px
-// 	height: 2px
-// 	background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.04) 1%,rgba(61,181,240,1) 26%,rgba(61,181,240,1) 72%,rgba(68,184,241,1) 73%,rgba(255,255,255,0) 100%)
-// 	margin: 0 auto 40px auto
 
 .clear
 	clear: both
@@ -813,7 +804,9 @@ footer
 	color: $white
 	background: #000
 	padding: 40px 0
-	background: url('img/main-bg.jpg') no-repeat center center
+	background-color: $dark
+	background-repeat: no-repeat
+	background-position: center center
 	background-size: cover
 	position: relative
 	&:before
@@ -828,7 +821,7 @@ footer
 		z-index: 0
 
 .ask:before
-	background: rgba(#000, .3)
+	background: rgba(#000, .4)
 	
 .v-info
 	font-size: 20px
@@ -874,8 +867,17 @@ footer
 .our
 	padding: 60px 0
 
+.works-list
+	&.no_owl-carousel
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.work-item
+			width: 20%
+			min-width: 260px
+
 .work-item
-	height: 260px
+	min-height: 200px
 	margin: 20px
 	border: 5px solid rgba(#3db5f0, 0.5)
 	color: #fff
@@ -883,6 +885,8 @@ footer
 	flex-direction: column
 	justify-content: flex-end
 	text-align: left
+	background-position: center center
+	background-repeat: no-repeat
 	background-size: cover
 	position: relative
 	&:before
@@ -893,18 +897,20 @@ footer
 		top: 0
 		width: 100%
 		height: 100%
-		background: rgba(#0f1c37, .4)
+		background: rgba(#0f1c37, .6) //linear-gradient(45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
 		z-index: 0
 	p
 		margin: 20px
-		font-size: 16px
+		font-size: 14px
 		line-height: 1.26
 		position: relative
 		z-index: 9
+		text-shadow: 0 0 6px #000
 		
 
 .circle
-	background: url('img/circle.png') no-repeat center
+	background-repeat: no-repeat
+	background-position: center center
 	background-size: 718px
 	border: 4px solid rgba($blue, 0.2)
 	border-radius: 50%
@@ -922,7 +928,8 @@ footer
 		height: 70px
 
 .circle2
-	background: url('img/circle.png') no-repeat center center
+	background-repeat: no-repeat
+	background-position: center center
 	background-size: 390px 390px
 	border: 4px solid rgba($blue, 0.2)
 	position: absolute
@@ -956,7 +963,7 @@ footer
 		border-radius: 50%
 		width: 60px
 		height: 60px
-		display: block
+		display: inline-block
 		line-height: 60px
 		text-align: center
 		box-shadow: 0 0 0px 4px rgba($white, .1), 0 0 30px rgba($white, .7)
@@ -1010,7 +1017,9 @@ footer
 	color: $white
 	background: #000
 	padding: 40px 0
-	background: url('img/blue-bg.jpg') no-repeat center center
+	background-color: $dark
+	background-repeat: no-repeat
+	background-position: center center
 	background-size: cover
 	position: relative
 	&:before
@@ -1024,9 +1033,10 @@ footer
 		background: rgba(#000, .5)
 		z-index: 0
 
+
+
 .chek
 	padding: 100px 0
-	background: url('img/blue2-bg.jpg') no-repeat center center
 	background-size: 100% 100%
 	&:before
 		background: rgba(#000, .2)
@@ -1046,7 +1056,6 @@ footer
 	span
 		font-weight: 600
 		color: $blue
-
 
 
 .command
@@ -1089,7 +1098,6 @@ footer
 			bottom: -60px
 			box-shadow: none
 			background-color: $white
-			//transition: all 0.1s linear 0
 
 .emp-nav
 	text-align: center
@@ -1119,8 +1127,9 @@ footer
 		max-width: 800px
 		margin: 20px auto
 		list-style: none
-		li
+		li .button
 			display: flex
+			//flex-wrap: wrap
 			justify-content: flex-start
 			align-items: center
 			align-content: center
@@ -1152,7 +1161,7 @@ footer
 				background: $gray
 				left: 0
 				top: -2px
-			&:hover
+			&:hover, &.open
 				background: $blue
 				&:after
 					color: $white
@@ -1172,6 +1181,14 @@ footer
 				border-bottom: 2px solid $blue
 				text-transform: uppercase
 				width: 100%
+
+.acc
+	display: none
+	width: 100%
+	background: $white
+	padding: 20px 20px 20px 140px
+	p
+		margin-bottom: 10px
 
 .c-line
 	width: 300px
@@ -1245,7 +1262,9 @@ footer
 	line-height: 1.6
 	.left
 		width: 50%
-		background: url('img/txt-bg.jpg') no-repeat center center
+		background-color: $gray
+		background-repeat: no-repeat
+		background-position: center center
 		background-size: cover
 		position: relative
 		&:before
@@ -1262,15 +1281,36 @@ footer
 		width: 50%
 		background: green
 		min-height: 300px
-		background: url('img/main-bg.jpg') no-repeat center
+		background-color: $dark
+		background-repeat: no-repeat
 		color: $gray
 		min-height: 400px
 		max-height: 400px
-		overflow: auto
-		padding: 40px
+		overflow: hidden
+		position: relative
+		.content
+			max-height: 100%
+			padding: 40px
+			overflow: auto
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			top: 0
+			z-index: 9
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 50px
+			background: linear-gradient(to bottom, rgba($dark, 0) 0%, rgba(#011342, 1) 100%)
+			z-index: 10
 	p
 		margin-bottom: 10px
-	h1,h2,h3
+	h1, h2, h3
 		text-transform: uppercase
 		margin-bottom: 20px
 
@@ -1367,7 +1407,9 @@ footer
 			opacity: 0
 
 
-
+.alisatm-vid
+	position: relative
+	z-index: 9
 
 
 input::placeholder, textarea::placeholder
@@ -1406,31 +1448,41 @@ input::placeholder, textarea::placeholder
 	.pr-list li
 		width: 100%
 
+	.tasks
+		margin: 10px
+
 	.task-item
-		padding: 20px 20px 20px 60px
+		padding: 10px
 		p
 			margin-right: 20px
 		img
 			max-width: 150px
 
+	.tip-res
+		margin-left: 0
+
 	.faq ul.fl1
 		width: 100%
 
 	.circle, .circle2
-		background: none
+		background: none !important
 		position: static
+		width: 100% !important
+		height: auto !important
 		border: none
 		.c-item
 			display: block
 			width: 100% !important
 			height: auto !important
-			min-height: 100px
+			//min-height: 100px
+			margin: 0 0 20px 0 !important
 			position: static !important
 			transform: unset !important
 			*
 				position: static !important
 			p
 				width: 100% !important
+				margin: 10px 0 !important
 			br
 				display: none
 				
@@ -1443,9 +1495,15 @@ input::placeholder, textarea::placeholder
 			display: none
 		.right
 			width: 100%
-			max-height: unset
+			//max-height: unset
 			background: #050D3B
-
+			overflow: auto
+			//&:after
+				//display: none
+			//.content
+				//position: static
+				//max-height: 400px
+				//overflow: auto
 	.in
 		width: 100%
 		position: relative
@@ -1475,16 +1533,36 @@ input::placeholder, textarea::placeholder
 
 	.h2
 		font-size: 22px
+		br
+			display: none
 	
+	.v-info
+		font-size: 16px
+								
 	.main
 		&:before, &:after
 			border-width: 0 50vw 60px 50vw
+
+
+	.vid
+		min-height: 50vh
+
+	.alisatm-vid
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.emp-nav
 		width: 90%
+
+	.v-info
+		br
+			display: none
 
 	footer
 		.in

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>AlisaTM</title>
 	<style>
-		
+		.icon-logo:before, .icon-logo:after, .icon-logo span:before{content: ''}
 	</style>
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="libs/modal/magnific-popup.css">
@@ -80,10 +80,10 @@
 		</nav>
 	</header>
 	
-	<main>
-		<section class="main">
-			<div class="bg"></div>
 
+	<main>
+		<section class="main" style="background-image: url('img/bg/main-bg.jpg')">
+			<div class="bg"></div>
 			<div class="in">
 				<h1 class="h1">Автоматизация <span>всех бизнес процессов бюро переводов</span></h1>
 
@@ -106,14 +106,14 @@
 					<p class="m-terms">
 						<input type="checkbox" id="cbx" style="display: none;">
 						<label for="cbx" class="check">
-							<svg width="18px" height="18px" viewBox="0 0 18 18">
+							<svg viewBox="0 0 18 18">
 								<path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
 								<polyline points="1 9 7 14 15 4"></polyline>
 							</svg>
 							<span>Я даю согласие на обработку персональных данных</span>
 						</label>
 					</p>
-					<button class="btn demo">Оставить заявку</button>
+					<button class="btn thanks">Оставить заявку</button>
 				</form>
 				
 			</div>
@@ -122,25 +122,25 @@
 
 
 		<section class="problem pbg">
-			<div id="particles-js"></div>
+			<div id="pjs" class="pjs"></div>
 
 			<div class="in">
 				<h2 class="h2"><span class="bold">Проблемы</span>, которые вы <span class="bold">сможете решить</span> <br>с помощью <span class="bold">нашей системы</span></h2>
 				<div class="r-line"></div>
 
 				<ul class="pr-list">
-					<li><p>Уход клиента к конкурентам</p> 
-						<p class="more"><a href="/">Узнать решение</a><span class="ico icon-pr1"></span></p>
-					<li><p>Куча программ для ведения данных: Excel, 1С, телефония…</p>
-						<p class="more"><a href="/">Узнать решение</a><span class="ico icon-pr2"></span></p>
-					<li><p>Менеджер забывает связаться с клиентом</p>
-						<p class="more"><a href="/">Узнать решение</a><span class="ico icon-pr3"></span></p>
-					<li><p>Ручное создание КП/Счета/Акт</p>
-						<p class="more"><a href="/">Узнать решение</a><span class="ico icon-pr4"></span></p>
-					<li><p>Руководитель тратит кучу времени на мелкую текучку</p>
-						<p class="more"><a href="/">Узнать решение</a><span class="ico icon-pr5"></span></p>
-					<li><p>Нет контроля финансовой части</p>
-						<p class="more"><a href="/">Узнать решение</a><span class="ico icon-pr6"></span></p>
+					<li><p class="pr-text">Уход клиента к конкурентам</p> 
+						<p class="more"><a href="/" data-text="Все заявки от клиентов будут поступать в crm модуль и ваш клиент никогда не уйдет к конкурентам">Узнать решение</a><span class="ico icon-pr1"></span></p>
+					<li><p class="pr-text">Куча программ для ведения данных: Excel, 1С, телефония…</p>
+						<p class="more"><a href="/" data-text="Создавайте все счета прямо в Alisa и отправляйте их сразу же клиенту и звоните им прямо в системе">Узнать решение</a><span class="ico icon-pr2"></span></p>
+					<li><p class="pr-text">Менеджер забывает связаться с клиентом</p>
+						<p class="more"><a href="/" data-text="Благодаря гибкому подбору исполнителей вы сможет выбрать того переводчика, который максимально качественно выполнит перевод и клиент будет доволен">Узнать решение</a><span class="ico icon-pr3"></span></p>
+					<li><p class="pr-text">Ручное создание КП/Счета/Акт</p>
+						<p class="more"><a href="/" data-text="Все внутренние документы в системе создается автоматически по вашему шаблону всего за несколько секунд, благодаря этому клиенту не придется долго ждать и он будет всегда доволен при сотрудничестве с вами">Узнать решение</a><span class="ico icon-pr4"></span></p>
+					<li><p class="pr-text">Руководитель тратит кучу времени на мелкую текучку</p>
+						<p class="more"><a href="/" data-text="Теперь вы сможете просмотреть все данные по работе каждого сотрудника ">Узнать решение</a><span class="ico icon-pr5"></span></p>
+					<li><p class="pr-text">Нет контроля финансовой части</p>
+						<p class="more"><a href="/" data-text="Вы сами можете посмотреть какой клиент принес вам больше всего прибыли и наблюдать за ростом прибыли агентства">Узнать решение</a><span class="ico icon-pr6"></span></p>
 				</ul>
 				<p class="h2"><span class="bold">Мы знаем</span> как избавится <br>от этих <span class="bold">проблем</span></p>
 				<div class="r-line"></div>
@@ -154,22 +154,22 @@
 			<div class="cs-wrap">
 				<div class="company-slider owl-carousel">
 					<div class="company-item">
-						<img src="img/tempo5.png">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/tmp/tempo.png">
 					</div>
 					<div class="company-item">
-						<img src="img/tempo4.png">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/tmp/tempo2.png">
 					</div>
 					<div class="company-item">
-						<img src="img/tempo3.png">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/tmp/tempo3.png">
 					</div>
 					<div class="company-item">
-						<img src="img/tempo2.png">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/tmp/tempo4.png">
 					</div>
 					<div class="company-item">
-						<img src="img/tempo.png">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/tmp/tempo5.png">
 					</div>
 					<div class="company-item">
-						<img src="img/tempo.png">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/tmp/tempo.png">
 					</div>
 				</div>
 			</div>
@@ -184,7 +184,7 @@
 				<div class="tasks-list owl-carousel">
 
 					<div class="task-item">
-						<img src="img/case1.jpg">
+						<img src="img/tmp/tempo.png">
 						<p class="tip1">КЕЙС</p>
 						<p class="tip2">Sigma <span class="t2u">sigma.ru</span></p>
 						<p class="tiph3">Задача</p>
@@ -201,7 +201,7 @@
 					</div>
 
 					<div class="task-item">
-						<img src="img/case2.jpg">
+						<img src="img/tmp/tempo.png">
 						<p class="tip1">КЕЙС</p>
 						<p class="tip2">Sigma <span class="t2u">sigma.ru</span></p>
 						<p class="tiph3">Задача</p>
@@ -222,7 +222,7 @@
 		</section>
 
 
-		<section class="get-video">
+		<section class="get-video lazyload" data-src="img/bg/main-bg.jpg">
 			<div class="in">
 		
 				<h2 class="h2 white">Нет <span class="bold">времени</span><br> на <span class="bold">демонстрацию</span>?</h2>
@@ -240,7 +240,7 @@
 
 					<div class="v-inp"><input type="text" name="uemail" placeholder="E-mail"></div>
 					
-					<div><button class="btn demo">Получить видеозапись</button></div>
+					<div><button class="btn thanks">Получить видеозапись</button></div>
 				</form>
 
 			</div>
@@ -254,41 +254,41 @@
 				<h2 class="h2">Собственные <span class="bold">разработки</span></h2>
 				<div class="r-line"></div>
 
-				<div class="works-list owl-carousel">
-					<div class="work-item demo" style="background-image: url('img/w1.jpg')">
+				<div class="works-list no_owl-carousel">
+					<div class="work-item lazyload no_owl-lazy" style="background-image: url('img/tmp/w.png')" data-src="img/tmp/ww1.jpg">
 						<p>Автоматическая генерация, счетов, актов в формате .doc</p>
 					</div>
-					<div class="work-item demo" style="background-image: url('img/w2.jpg')">
-						<p>Автоматическая генерация, счетов, актов в формате .doc</p>
+					<div class="work-item lazyload no_owl-lazy" style="background-image: url('img/tmp/w.png')" data-src="img/tmp/ww2.jpg">
+						<p>Подбор наиболее подходящих исполнителей на уровне искуственного интелекта</p>
 					</div>
-					<div class="work-item demo" style="background-image: url('img/w3.jpg')">
-						<p>Калькулятор расчета стоимости  перевода</p>
+					<div class="work-item lazyload no_owl-lazy" style="background-image: url('img/tmp/w.png')" data-src="img/tmp/ww3.jpg">
+						<p>Калькулятор расчета стоимости перевода и автоматическая отправка КП</p>
 					</div>
-					<div class="work-item demo" style="background-image: url('img/w4.jpg')">
-						<p>Калькулятор расчета стоимости  перевода</p>
+					<div class="work-item lazyload no_owl-lazy" style="background-image: url('img/tmp/w.png')" data-src="img/tmp/ww4.jpg">
+						<p>Клиент может отслеживать прогресс перевода прямо из своего личного кабинета</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		
-		<section class="what">
+		<section class="what lazyload" data-src="img/bg/main-bg.jpg">
 			<div class="in">
-				<h2 class="h2 white">Что Мы <span class="bold">получим</span> после того <br>как <span class="bold">начнем пользоваться системой</span></h2>
+				<h2 class="h2 white">Что Вы <span class="bold">получите</span> после того <br>как <span class="bold">начнете пользоваться системой</span></h2>
 
 				<div class="c-line"></div>
 
-				<div class="circle">
+				<div class="circle lazyload" data-src="img/circle.png">
 					<div class="c-item"><span class="ico icon-c5"></span><p>Ограничение<br>доступа</p></div>
 					<div class="c-item"><span class="ico icon-c11"></span><p>Контроль задач</p></div>
 					<div class="c-item empty"></div>
 					<div class="c-item"><span class="ico icon-c3"></span><p>Финансовый учёт</p></div>
 					<div class="c-item"><span class="ico icon-c2"></span><p>Почта</p></div>
 					<div class="c-item"><span class="ico icon-c1"></span><p>Телефония</p></div>
-					<div class="c-item" empty></div>
+					<div class="c-item"><span class="ico icon-c6"></span><p>Бизнес-процессы <br>в одном окне</p></div>
 					<div class="c-item"><span class="ico icon-c4"></span><p>Контроль продаж</p></div>
 
-					<div class="circle2">
+					<div class="circle2 lazyload" data-src="img/circle.png">
 						<div class="c-item empty"></div>
 						<div class="c-item"><span class="ico icon-c8"></span><p>Быстрый калькулятрор<br>расчета стоимости</p></div>
 						<div class="c-item empty"></div>
@@ -296,7 +296,7 @@
 						<div class="c-item empty"></div>
 						<div class="c-item"><span class="ico icon-c10"></span><p>Статистика и<br> аналитика</p></div>
 						<div class="c-item empty"></div>
-						<div class="c-item"><span class="ico icon-c6"></span><p>Бизнес-процессы <br>в одном окне</p></div>
+						<div class="c-item empty"></div>
 						<div class="c-item"><span class="ico icon-c7"></span><p>Автоформирование<br>документов</p></div>
 					</div>
 
@@ -310,7 +310,6 @@
 		<section class="noask pbg"><div class="pjs"></div>
 			<div class="in">
 				
-		
 				<h2 class="h2">То что <span class="bold">невозможно <br>передать словами</span></h2>
 				<div class="r-line"></div>
 
@@ -324,7 +323,7 @@
 		</section>
 
 
-		<div class="result">
+		<div class="result lazyload" data-src="img/bg/blue-bg.jpg">
 			<div class="in">
 				<div class="center">
 					<p class="r-info"><span>С ALISA TM</span> ВЫ НАПРАВЛЕНЫ ТОЛЬКО НА <span>РЕЗУЛЬТАТ</span></p>
@@ -338,23 +337,23 @@
 			<div class="in">
 				<div class="emp-list owl-carousel">
 					<div class="emp-item" data-src="1">
-						<img src="img/emp1.jpg">
+						<img src="img/tmp/emp1.jpg">
 						<div class="e-name"><span class="fio">Анна Литвинова</span> SMM manager</div>
 					</div>
 					<div class="emp-item" data-src="2">
-						<img src="img/emp1.jpg">
+						<img src="img/tmp/emp1.jpg">
 						<div class="e-name"><span class="fio">Анна Литвинова</span> SMM manager</div>
 					</div>
 					<div class="emp-item" data-src="3">
-						<img src="img/emp1.jpg">
+						<img src="img/tmp/emp1.jpg">
 						<div class="e-name"><span class="fio">Анна Литвинова</span> SMM manager</div>
 					</div>
 					<div class="emp-item" data-src="4">
-						<img src="img/emp1.jpg">
+						<img src="img/tmp/emp1.jpg">
 						<div class="e-name"><span class="fio">Анна Литвинова</span> SMM manager</div>
 					</div>
 					<div class="emp-item" data-src="5">
-						<img src="img/emp1.jpg">
+						<img src="img/tmp/emp1.jpg">
 						<div class="e-name"><span class="fio">Анна Литвинова</span> SMM manager</div>
 					</div>
 				</div>
@@ -366,8 +365,9 @@
 		</div>
 
 
-		<div class="vid center">
-			<iframe style="border: none; width:640px; height:360px; position: relative; z-index: 9;" src="https://www.youtube.com/embed/iFeJV3uN95o" allowfullscreen></iframe>
+		<div class="vid center lazyload" data-src="img/bg/blue-bg.jpg">
+			<!-- <iframe style="border: none; width:640px; height:360px; position: relative; z-index: 9;" src="https://www.youtube.com/embed/iFeJV3uN95o" allowfullscreen></iframe> -->
+			<div class="alisatm-vid" id="iFeJV3uN95o" data-video-id="iFeJV3uN95o" width="800" height="400"></div>
 		</div>
 
 
@@ -378,18 +378,23 @@
 				<div class="r-line"></div>
 
 				<ul class="fl1">
-					<li><span class="ico icon-f1"></span> <p>Внедрение и разработка стоит недешево</p>
-					<li><span class="ico icon-f2"></span> <p>Подойдет ли ваша система именно для моего агентства</p>
-					<li><span class="ico icon-f3"></span> <p>Менеджеры отказываются работать в CRM</p>
-					<li><span class="ico icon-f4"></span> <p>У нас и так куча программ, все не успеем вести</p>
-					<li><span class="ico icon-f5"></span> <p>Я выберу другую систему подешевле</p>
+					<li><div class="button"><span class="ico icon-f1"></span> <p>Внедрение и разработка стоит недешево</p></div>
+						<div class="acc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p> Quas tenetur quos, assumenda ullam ex nulla iste optio ad, recusandae atque dolor consequatur unde, veniam sapiente nam. </p><p>Animi, dolorum doloribus debitis.</p></div>
+					<li><div class="button"><span class="ico icon-f2"></span> <p>Подойдет ли ваша система именно для моего агентства</p></div>
+						<div class="acc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p> Quas tenetur quos, assumenda ullam ex nulla iste optio ad, recusandae atque dolor consequatur unde, veniam sapiente nam. </p><p>Animi, dolorum doloribus debitis.</p></div>
+					<li><div class="button"><span class="ico icon-f3"></span> <p>Менеджеры отказываются работать в CRM</p></div>
+						<div class="acc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p> Quas tenetur quos, assumenda ullam ex nulla iste optio ad, recusandae atque dolor consequatur unde, veniam sapiente nam. </p><p>Animi, dolorum doloribus debitis.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p> Quas tenetur quos, assumenda ullam ex nulla iste optio ad, recusandae atque dolor consequatur unde, veniam sapiente nam. </p><p>Animi, dolorum doloribus debitis.</p></div>
+					<li><div class="button"><span class="ico icon-f4"></span> <p>У нас и так куча программ, все не успеем вести</p></div>
+						<div class="acc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p> Quas tenetur quos, assumenda ullam ex nulla iste optio ad, recusandae atque dolor consequatur unde, veniam sapiente nam. </p><p>Animi, dolorum doloribus debitis.</p></div>
+					<li><div class="button"><span class="ico icon-f5"></span> <p>Я выберу другую систему подешевле</p></div>
+						<div class="acc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><p> Quas tenetur quos, assumenda ullam ex nulla iste optio ad, recusandae atque dolor consequatur unde, veniam sapiente nam. </p><p>Animi, dolorum doloribus debitis.</p></div>
 				</ul></p>
 
 			</div>
 		</section>
 
 
-		<div class="chek">
+		<div class="chek lazyload" data-src="img/bg/blue2-bg.jpg">
 			<div class="in">
 				<h2 class="h2 white">Чек-лист</h2>
 
@@ -404,12 +409,42 @@
 		</div>
 
 
+		<div class="companies pad">
+				<p class="h2"><span class="bold">Партнеры</span></p>
+				<div class="r-line"></div>
+				<p class="m-desc center bold">Это уже нескольких десятков компаний:</p>
+			<div class="cs-wrap">
+				<div class="company-slider owl-carousel">
+					<div class="company-item">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/companies/0.png">
+					</div>
+					<div class="company-item">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/companies/0.png">
+					</div>
+					<div class="company-item">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/companies/0.png">
+					</div>
+					<div class="company-item">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/companies/0.png">
+					</div>
+					<div class="company-item">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/companies/0.png">
+					</div>
+					<div class="company-item">
+						<img class="owl-lazy lazyload" src="img/companies/0.png" data-src="img/companies/0.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<div class="txt">
-			<div class="left">
+			<div class="left lazyload" data-src="img/bg/txt-bg.jpg">
 
 			</div>
 
-			<div class="right">
+			<div class="right lazyload" data-src="img/bg/main-bg.jpg">
+				<div class="content">
 				<h2>Сео текст заголовок</h2>
 				<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Знаках она ее курсивных! Языком вдали сбить, дороге заглавных диких своих семантика они которой осталось залетают рукописи. Диких раз коварный коварных ipsum продолжил что проектах это знаках буквоград наш домах семь ее возвращайся, взобравшись но текстами дал которое щеке приставка грустный, своего вопрос однажды эта! Безопасную, скатился власти! </p>
 
@@ -423,7 +458,7 @@
 
 				<p>Скатился строчка знаках единственное домах это, свое напоивший ты ему что власти, правилами снова которой коварных лучше букв дорогу там lorem моей свой щеке рукопись запятых живет. Своего маленький снова моей силуэт, подпоясал журчит дал. Домах путь, единственное над.
 				</p>			
-
+				</div>
 				</div>
 
 		</div>
@@ -436,17 +471,17 @@
 				<div class="r-line"></div>
 
 				<ul>
-					<li><a href="" class="imh demo" style="background-image: url('img/w1.jpg')"><span>Screeen shot #1</span></a> <p>Внедрение и разработка стоит недешево</p>
-					<li><a href="" class="imh demo" style="background-image: url('img/w2.jpg')"><span>Screeen shot #2</span></a> <p>Подойдет ли ваша система именно для моего агентства</p>
-					<li><a href="" class="imh demo" style="background-image: url('img/w3.jpg')"><span>Screeen shot #3</span></a> <p>Менеджеры отказываются работать в CRM</p>
-					<li><a href="" class="imh demo" style="background-image: url('img/w4.jpg')"><span>Screeen shot #4</span></a> <p>У нас и так куча программ, все не успеем вести</p>
+					<li><a href="" class="imh" style="background-image: url('img/tmp/w.png')"><span>Screeen shot #1</span></a> <p>Внедрение и разработка стоит недешево</p>
+					<li><a href="" class="imh" style="background-image: url('img/tmp/w.png')"><span>Screeen shot #2</span></a> <p>Подойдет ли ваша система именно для моего агентства</p>
+					<li><a href="" class="imh" style="background-image: url('img/tmp/w.png')"><span>Screeen shot #3</span></a> <p>Менеджеры отказываются работать в CRM</p>
+					<li><a href="" class="imh" style="background-image: url('img/tmp/w.png')"><span>Screeen shot #4</span></a> <p>У нас и так куча программ, все не успеем вести</p>
 				</ul></p>
 
 			</div>
 		</section>
 
 		
-		<section class="ask">
+		<section class="ask lazyload" data-src="img/bg/main-bg.jpg">
 			<div class="in">
 				<h2 class="h2 white">Остались вопросы?</h2>
 
@@ -459,7 +494,7 @@
 					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
 					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
 					
-					<div style="margin-top:40px"><button class="btn">Получить консультацию</button></div>
+					<div style="margin-top:40px"><button class="btn thanks">Получить консультацию</button></div>
 				</form>
 			</div>
 		</section>
@@ -481,45 +516,100 @@
 			</div>
 
 			<div class="f-contact">
-				<button type="button demo">Перезвоните мне</button>
+				<button type="button" class="thanks">Перезвоните мне</button>
 			</div>
 		</div>
 	</footer>
 
-	<div id="mod-consultation" class="white-popup mfp-hide">
-  <form action="" method="post" class="m-form">
-					<p class="a-info" style="margin:20px 0"><span class="bold">заполняйте форму</span>, и наш менеджер<br> проведет для Вас <span class="bold">бесплатную консультацию!</span></p>
 
-					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваше имя"></div>
-					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
-					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
-					
-					<div style="margin-top:40px"><button class="btn demo">Получить консультацию</button></div>
-				</form>
+<!--  modals -->
+	<div id="mod-consultation" class="white-popup mfp-hide">
+		<form action="" method="post" class="m-form">
+			<p class="a-info" style="margin:20px 0"><span class="bold">заполняйте форму</span>, и наш менеджер<br> проведет для Вас <span class="bold">бесплатную консультацию!</span></p>
+
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваше имя"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
+			
+			<div style="margin-top:40px"><button class="btn thanks">Получить консультацию</button></div>
+		</form>
 	</div>
+
 
 	<div id="mod-more" class="white-popup mfp-hide">
-  					<p style="font-size: 14px;font-weight: 600;color:#00cbff">ПРОБЛЕМА</p>
-					<p class="a-info" style="margin:20px 0"><span class="bold">свою большой сбить</span>, эта строчка языком залетают запятых рукописи алфавит <span class="bold">вскоре ведущими!</span></p>
-<p style="font-size: 14px;font-weight: 600;color:#00d600">РЕШЕНИЕ</p>
-					<p>буквенных своего коварный осталось пор правилами на берегу свой там составитель безопасную они текста</p>
-					
-					<div style="margin-top:40px"><button class="btn demo">Хочу также</button></div>	
+		<p style="font-size: 14px; font-weight: 600; color: #00cbff;">ПРОБЛЕМА</p>
+		<p class="a-info" style="margin: 10px 0 20px 0;"></p>
+		<p style="font-size: 14px; font-weight: 600;color: #00d600;">РЕШЕНИЕ</p>
+		<p class="a-text" style="margin: 10px 0;"></p>
+		<div style="margin-top:40px"><button class="btn pr">Хочу также</button></div>	
 	</div>
 
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs> <symbol viewBox="0 0 351 28.7" id="line">
 
-<radialGradient id="a" cx="175" cy="37.789" r="213.808" gradientTransform="matrix(1 0 0 .06708 0 12.423)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0028f1"/><stop offset=".063" stop-color="#0022cd" stop-opacity=".919"/><stop offset=".168" stop-color="#001997" stop-opacity=".785"/><stop offset=".274" stop-color="#001169" stop-opacity=".65"/><stop offset=".379" stop-color="#000b43" stop-opacity=".515"/><stop offset=".483" stop-color="#000626" stop-opacity=".383"/><stop offset=".585" stop-color="#000311" stop-opacity=".252"/><stop offset=".686" stop-color="#000104" stop-opacity=".123"/><stop offset=".782" stop-opacity="0"/></radialGradient><ellipse cx="175" cy="15" rx="247.7" ry="16.9" fill="url(#a)"/><radialGradient id="b" cx="175" cy="37.788" r="213.808" gradientTransform="matrix(1 0 0 .06708 0 12.423)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00e1f1"/><stop offset=".063" stop-color="#00bfcd" stop-opacity=".919"/><stop offset=".168" stop-color="#008d97" stop-opacity=".785"/><stop offset=".274" stop-color="#006269" stop-opacity=".65"/><stop offset=".379" stop-color="#003f43" stop-opacity=".515"/><stop offset=".483" stop-color="#002326" stop-opacity=".383"/><stop offset=".585" stop-color="#001011" stop-opacity=".252"/><stop offset=".686" stop-color="#000404" stop-opacity=".123"/><stop offset=".782" stop-opacity="0"/></radialGradient><ellipse cx="175" cy="15" rx="247.7" ry="16.9" fill="url(#b)"/><radialGradient id="c" cx="175" cy="-64.133" r="213.808" gradientTransform="matrix(1 0 0 .01273 0 15.775)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c8c8c8"/><stop offset=".032" stop-color="#bbb" stop-opacity=".968"/><stop offset=".163" stop-color="#8a8a8a" stop-opacity=".837"/><stop offset=".296" stop-color="#5f5f5f" stop-opacity=".704"/><stop offset=".431" stop-color="#3d3d3d" stop-opacity=".569"/><stop offset=".568" stop-color="#222" stop-opacity=".432"/><stop offset=".707" stop-color="#0f0f0f" stop-opacity=".293"/><stop offset=".849" stop-color="#040404" stop-opacity=".151"/><stop offset="1" stop-opacity="0"/></radialGradient><ellipse cx="175" cy="15" rx="247.7" ry="3.2" fill="url(#c)"/>
-</symbol></defs>
+	<div id="mod-problem" class="white-popup mfp-hide">
+		<form action="" method="post" class="m-form">
+			<p class="a-info" style="margin:20px 0">Оставьте заявку на бесплатную консультацию, где менеджер расскажет про решение вашей проблемы</p>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваше имя"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
+			<div style="margin-top:40px"><button class="btn thanks">Оставить заявку</button></div>
+		</form>
+	</div>
+
+	<div id="mod-thanks" class="white-popup mfp-hide">
+		<p class="a-info" style="margin: 20px 0; font-size: 28px">Спасибо за заявку</p>
+		<p>Мы свяжемся с Вами в ближайшее время</p>
+	</div>
+
+<!--  end modals -->
+
+
+
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs> 
+<symbol viewBox="0 0 18 18" id="icon-name">						
+</symbol>
+</defs>
 </svg>
 
 
-	<script src="libs/jquery/jquery.min.js"></script>
-	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
-	<script src="libs/particles/particles.min.js"></script>
-	<script src="libs/particles/demo/js/app.js"></script>
-	<script src="libs/modal/jquery.magnific-popup.min.js"></script>
-	<script>
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="libs/particles/particles.min.js"></script>
+<script src="libs/particles/demo/js/app.js"></script>
+<script src="libs/modal/jquery.magnific-popup.min.js"></script>
+<script src="libs/youtube/jquery.inview.min.js"></script>
+<script src="libs/youtube/jquery.youtube-inview-autoplay.js"></script>
+<script src="libs/lazyload/lazyload.min.js"></script>
+<script>
+	lazyload();
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/player_api";
+	var fst = document.getElementsByTagName('script')[0];
+	fst.parentNode.insertBefore(tag, fst);
+
+	function onYouTubeIframeAPIReady() {
+		$('.alisatm-vid').inViewAutoplay({
+			autohide: 1,
+			modestbranding: 1,
+			rel: 0,
+			quality: 'hd720'
+		});
+	}
+
+	//var done = false;
+
+	//function onPlayerStateChange(event) {
+		//console.log(event.data);
+		// if (event.data == YT.PlayerState.PLAYING && !done) {
+		// 	setTimeout(stopVideo, 6000);
+		// 	done = true;
+		// }
+	//}
+	
+	//function stopVideo() {
+		//player.stopVideo();
+	//}
+
 	$(function() {
 		var ismob = false;
 
@@ -559,6 +649,24 @@
 		  	mainClass: 'mfp-zoom-in'
 		});
 
+		$('.pr').magnificPopup({
+			items: {
+			  src: '#mod-problem',
+			  type: 'inline'
+			},
+			removalDelay: 300,
+		  	mainClass: 'mfp-zoom-in'
+		});
+
+		$('.thanks').magnificPopup({
+			items: {
+			  src: '#mod-thanks',
+			  type: 'inline'
+			},
+			removalDelay: 300,
+		  	mainClass: 'mfp-zoom-in'
+		});
+
 		$('.more a').magnificPopup({
 			items: {
 			  src: '#mod-more',
@@ -566,9 +674,18 @@
 			},
 			removalDelay: 300,
 		  	mainClass: 'mfp-zoom-in'
+		}).on('click', function(event){
+
+			$('#mod-more .a-info').text($(this).parents('li').find('.pr-text').text());
+			$('#mod-more .a-text').text($(this).data("text"));
+		});
+
+		$('.fl1 li').on('click', function(event){
+			$(this).find('.acc').slideToggle();
+			$(this).find('.button').toggleClass('open');
 		});
   
-		var head = $(".header"), nav_offset_top = 40;//head.height();
+		var head = $(".header"), nav_offset_top = 40; //head.height();
 	    var pscroll = 0;
 
 	    function navbarFixed() {
@@ -591,6 +708,7 @@
 		cs.owlCarousel({
 			stagePadding: 0,
 			loop: true,
+			lazyLoad:true,
 			nav: true,
 			navText: navs,
 			dots: false,
@@ -602,6 +720,9 @@
 			responsive:{
 		        0:{
 		            items: 1
+		        },
+		        480:{
+		            items: 2
 		        },
 		        600:{
 		            items: 3
@@ -625,9 +746,10 @@
 			navSpeed: 800
     	});
 
-    	wl.owlCarousel({
+    	/*wl.owlCarousel({
 			stagePadding: 0,
-			loop: true,
+			loop: false,
+			lazyLoad:true,
 			nav: true,
 			navText: navs,
 			dots: false,
@@ -650,7 +772,7 @@
 		            items: 4
 		        }
 		    }
-    	});
+    	});*/
 
     	el.owlCarousel({
 			stagePadding: 0,
@@ -693,48 +815,33 @@
 		    }
     	});
 
-    	function cloneCanvas(oldCanvas) {
-		    var newCanvas = document.createElement('canvas');
-		    var context = newCanvas.getContext('2d');
-		    newCanvas.width = oldCanvas.width;
-		    newCanvas.height = oldCanvas.height;
-		    context.drawImage(oldCanvas, 0, 0);
-		    return newCanvas;
-		}
 
-		
+
+
+		// function cloneCanvas(oldCanvas) {
+		//     var newCanvas = document.createElement('canvas');
+		//     var context = newCanvas.getContext('2d');
+		//     newCanvas.width = oldCanvas.width;
+		//     newCanvas.height = oldCanvas.height;
+		//     context.drawImage(oldCanvas, 0, 0);
+		//     return newCanvas;
+		// }
 
 		$('.pjs').each(function (e) {
-			$(this).attr('id', 'particle-' + e);
-			particlesJS('particle-' + e, options);
+			$(this).attr('id', 'lf_e-' + e);
+			particlesJS('lf_e-' + e, options);
 			//var nc = cloneCanvas(document.querySelector("#particles-js canvas"));
-			//var img = document.getElementById("particles2");
 			//$(this).append(nc);
-		   //$(this).attr('id', 'particle-' + e)
-		   //console.log($(this));
-		   //particlesJS.load('particle-' + e, path.resolve(__dirname, 'assets/js/vendor/particlesjs-config.json'))
+
+			//pJSDom[0].pJS.particles.move.enable = true;
+			//pJSDom[0].pJS.fn.particlesRefresh();
 		})
 
+		//particlesJS('pjs', options);
 
-particlesJS('particles-js', options);
-
-//options2.particles.move.enable = false;
-
-
-
-// $('.js-particle').each(function (e) {
-//    $(this).attr('id', 'particle-' + e)
-   
-//    particlesJS.load('particle-' + e, path.resolve(__dirname, 'assets/js/vendor/particlesjs-config.json'))
-// })
-
-//     	var c = document.querySelector("#particles-js canvas");
-// var ctx = c.getContext("2d");
-// var img = document.getElementById("particles2 canvas");
-// ctx.drawImage(img, 0, 0);
-// var imgData = ctx.getImageData(0, 0, c.width, c.height);
-// ctx.putImageData(imgData, 0, 0);
 	});
-	</script>
+
+</script>
+
 </body>
 </html>
