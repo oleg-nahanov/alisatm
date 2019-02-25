@@ -342,7 +342,8 @@ lazyload();
 
 		$('.pjs').each(function (e) {
 			$(this).attr('id', 'lf_e-' + e);
-			//particlesJS('lf_e-' + e, options);
+			setTimeout(function() { particlesJS('lf_e-' + e, options); }, e*1000);
+			
 			//var nc = cloneCanvas(document.querySelector("#particles-js canvas"));
 			//$(this).append(nc);
 
