@@ -8,8 +8,8 @@
 	<style>
 		.icon-logo:before, .icon-logo:after, .icon-logo span:before{content: ''}
 	</style>
-	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="libs/modal/magnific-popup.css">
+<!-- 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/modal/magnific-popup.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="description" content="">
 	<meta property="og:title" content="">
@@ -142,7 +142,7 @@
 					<li><p class="pr-text">Нет контроля финансовой части</p>
 						<p class="more"><a href="/" data-text="Вы сами можете посмотреть какой клиент принес вам больше всего прибыли и наблюдать за ростом прибыли агентства">Узнать решение</a><span class="ico icon-pr6"></span></p>
 				</ul>
-				<p class="h2"><span class="bold">Мы знаем</span> как избавится <br>от этих <span class="bold">проблем</span></p>
+				<p class="h2"><span class="bold">Мы знаем</span> как избавиться <br>от этих <span class="bold">проблем</span></p>
 				<div class="r-line"></div>
 				<p class="m-desc center bold">Потому что мы сделали это уже для нескольких десятков компаний:</p>
 			</div>
@@ -572,285 +572,26 @@
 
 
 
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs> 
 <symbol viewBox="0 0 18 18" id="icon-name">						
 </symbol>
 </defs>
-</svg>
+</svg> -->
 
 
-<script src="libs/jquery/jquery.min.js"></script>
+<!-- <script src="libs/jquery/jquery.min.js"></script>
 <script src="libs/owl-carousel/owl.carousel.min.js"></script>
-<script src="libs/particles/particles.min.js"></script>
-<script src="libs/particles/demo/js/app.js"></script>
-<script src="libs/modal/jquery.magnific-popup.min.js"></script>
+<script src="libs/particles/particles.min.js"></script> -->
+<!-- <script src="libs/particles/demo/js/app.js"></script> -->
+<!-- <script src="libs/modal/jquery.magnific-popup.min.js"></script>
 <script src="libs/youtube/jquery.inview.min.js"></script>
-<script src="libs/youtube/jquery.youtube-inview-autoplay.js"></script>
+<script src="libs/youtube/jquery.youtube-inview-autoplay.js"></script> -->
+<script src="js/libs.min.js"></script>
 <script src="libs/lazyload/lazyload.min.js"></script>
+<script src="js/main.min.js"></script>
 <script>
-	lazyload();
-	var tag = document.createElement('script');
-	tag.src = "https://www.youtube.com/player_api";
-	var fst = document.getElementsByTagName('script')[0];
-	fst.parentNode.insertBefore(tag, fst);
-
-	function onYouTubeIframeAPIReady() {
-		$('.alisatm-vid').inViewAutoplay({
-			autohide: 1,
-			modestbranding: 1,
-			rel: 0,
-			quality: 'hd720'
-		});
-	}
-
-	//var done = false;
-
-	//function onPlayerStateChange(event) {
-		//console.log(event.data);
-		// if (event.data == YT.PlayerState.PLAYING && !done) {
-		// 	setTimeout(stopVideo, 6000);
-		// 	done = true;
-		// }
-	//}
 	
-	//function stopVideo() {
-		//player.stopVideo();
-	//}
-
-	$(function() {
-		var ismob = false;
-
-		$(window).on('resize', function() {
-	        //$owl.trigger('refresh.owl.carousel');
-	        //offset = $('#header').height() + 10;
-	        //$('#main').css('margin-top', offset - 10);
-
-	        if($(window).width() < 800) {
-	            //$('.menu').addClass('open'); 
-	            ismob = true;
-	        } else {
-	            $('.nav').removeClass('open');
-	            $('.hamb').removeClass('close');
-	            ismob = false;
-	        }
-	    });
-
-	    $('.hamb').on('click', function () {
-	        if(!ismob) {
-	            $('.nav').addClass('open');
-	            $(this).addClass('close');
-	            ismob = true;
-	        } else {
-	            $('.nav').removeClass('open');
-	            $(this).removeClass('close');
-	            ismob = false;
-	        }
-	    });
-
-		$('.get-c, .demo').magnificPopup({
-			items: {
-			  src: '#mod-consultation',
-			  type: 'inline'
-			},
-			removalDelay: 300,
-		  	mainClass: 'mfp-zoom-in'
-		});
-
-		$('.pr').magnificPopup({
-			items: {
-			  src: '#mod-problem',
-			  type: 'inline'
-			},
-			removalDelay: 300,
-		  	mainClass: 'mfp-zoom-in'
-		});
-
-		$('.thanks').magnificPopup({
-			items: {
-			  src: '#mod-thanks',
-			  type: 'inline'
-			},
-			removalDelay: 300,
-		  	mainClass: 'mfp-zoom-in'
-		});
-
-		$('.more a').magnificPopup({
-			items: {
-			  src: '#mod-more',
-			  type: 'inline'
-			},
-			removalDelay: 300,
-		  	mainClass: 'mfp-zoom-in'
-		}).on('click', function(event){
-
-			$('#mod-more .a-info').text($(this).parents('li').find('.pr-text').text());
-			$('#mod-more .a-text').text($(this).data("text"));
-		});
-
-		$('.fl1 li').on('click', function(event){
-			$(this).find('.acc').slideToggle();
-			$(this).find('.button').toggleClass('open');
-		});
-  
-		var head = $(".header"), nav_offset_top = 40; //head.height();
-	    var pscroll = 0;
-
-	    function navbarFixed() {
-	        head.length && $(window).scroll(function() {
-	            var scroll = $(window).scrollTop();
-	            scroll >= nav_offset_top && (
-	                head.removeClass("alpha"), 
-	                scroll > pscroll ? head.addClass("is-hidden").removeClass("is-visible") : head.addClass("is-visible").removeClass("is-hidden"), 
-	                pscroll = scroll
-	            );
-	            70 >= scroll && head.addClass("alpha");
-	        });
-	    };
-
-	    navbarFixed();
-
-	    var cs = $(".company-slider"), tl = $(".tasks-list"), wl = $(".works-list"), el = $(".emp-list"), 
-	    navs = ['<span class="icon-arrowleft"></span>', '<span class="icon-arrowright"></span>'];;
-
-		cs.owlCarousel({
-			stagePadding: 0,
-			loop: true,
-			lazyLoad: true,
-			nav: true,
-			navText: navs,
-			dots: false,
-			items: 5,
-			autoWidth: false,
-			singleItem: false,
-			autoplay: false,
-			navSpeed: 800,
-			responsive:{
-		        0:{
-		            items: 1
-		        },
-		        480:{
-		            items: 2
-		        },
-		        600:{
-		            items: 3
-		        },
-		        1000:{
-		            items: 5
-		        }
-		    }
-    	});
-
-		tl.owlCarousel({
-			stagePadding: 0,
-			loop: true,
-			lazyLoad: true,
-			nav: true,
-			navText: navs,
-			dots: false,
-			items: 1,
-			autoWidth: false,
-			singleItem: true,
-			autoplay: false,
-			navSpeed: 800
-    	});
-
-    	/*wl.owlCarousel({
-			stagePadding: 0,
-			loop: false,
-			lazyLoad:true,
-			nav: true,
-			navText: navs,
-			dots: false,
-			items: 4,
-			autoWidth: false,
-			singleItem: false,
-			autoplay: false,
-			navSpeed: 800,
-			responsive:{
-		        0:{
-		            items: 1
-		        },
-		        600:{
-		            items: 2
-		        },
-		        900:{
-		            items: 3
-		        },
-		        1200:{
-		            items: 4
-		        }
-		    }
-    	});*/
-
-    	el.owlCarousel({
-			stagePadding: 0,
-			center: true,
-			loop: true,
-			lazyLoad: true,
-			nav: true,
-			navText: navs,
-			navContainer: ".emp-nav",
-			dots: false,
-			items: 5,
-			autoWidth: false,
-			singleItem: false,
-			autoplay: false,
-			navSpeed: 800,
-			onChange: function (elem) {
-		      //var current = this.currentItem;
-		      //var src = elem.find(".owl-item").eq(current).find("img").attr('src');
-		      //console.log( $(elem.target).find(".owl-item.center").find(".emp-item").attr('data-src'));
-		    },
-		    onInitialize: function (e) {
-		    	//console.log(e);
-		    },
-		    responsive:{
-		        0:{
-		            items: 1,
-		            singleItem: true,
-		            //autoWidth: true
-		        },
-		        600:{
-		            items: 1,
-		            singleItem: true,
-		            //autoWidth: true
-		        },
-		        900:{
-		            items: 3
-		        },
-		        1200:{
-		            items: 5
-		        }
-		    }
-    	});
-
-
-
-
-		// function cloneCanvas(oldCanvas) {
-		//     var newCanvas = document.createElement('canvas');
-		//     var context = newCanvas.getContext('2d');
-		//     newCanvas.width = oldCanvas.width;
-		//     newCanvas.height = oldCanvas.height;
-		//     context.drawImage(oldCanvas, 0, 0);
-		//     return newCanvas;
-		// }
-
-		$('.pjs').each(function (e) {
-			$(this).attr('id', 'lf_e-' + e);
-			particlesJS('lf_e-' + e, options);
-			//var nc = cloneCanvas(document.querySelector("#particles-js canvas"));
-			//$(this).append(nc);
-
-			//pJSDom[0].pJS.particles.move.enable = true;
-			//pJSDom[0].pJS.fn.particlesRefresh();
-		})
-
-		//particlesJS('pjs', options);
-
-	});
-
 </script>
 
 </body>
