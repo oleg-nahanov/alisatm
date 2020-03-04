@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>AlisaTM</title>
+	<style>
+		.icon-logo:before, .icon-logo:after, .icon-logo span:before{content: ''}
+	</style>
+<!-- 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/modal/magnific-popup.css"> -->
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/critical.css">
+	<meta name="description" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta name="author" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="ru_RU">
+	<link rel="canonical" href="">
+	<script type="application/ld+json">{
+        "name":"",
+        "description":"",
+        "@type":"WebSite",
+        "url":"",
+        "image":"",
+        "headline":"",
+        "sameAs":[
+            "https://twitter.com/",
+            "https://github.com/"
+        ],
+        "@context":"http://schema.org"
+    }</script>
+<!--     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#010614"> -->
+    <!-- <link rel="shortcut icon" href="icons/favicon.ico"> -->
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+	<meta name="theme-color" content="#010614"> 
+	<style>
+	body {
+		min-height: 100vh;
+		transition: background .8s ease-in-out;
+	}
+
+	/* body:before {
+		content: '';
+		display: block;
+		position: fixed;
+		left:0;
+		top:0;
+		width: 100vw;
+		height:100vh;
+		background: radial-gradient(ellipse at center, rgba(107,95,89,1) 0%,rgba(54,47,45,1) 100%);
+		z-index: 0;
+	} */
+
+	.section {
+		display: flex;
+		align-items: center;/*flex-start;*/
+		position: relative;
+		overflow: hidden;
+		padding: 120px 0 20px 120px;
+		width: 100%;
+		min-height: 100vh;
+		background: transparent;
+		background: linear-gradient(to right, rgba(0,0,0,0) 10%,rgba(0,0,0,0.4) 100%);
+		color: white;
+	}
+
+	.p-in {
+		display: flex;
+		flex-wrap: nowrap;
+		position: relative;
+	}
+
+	.p-in .left {
+		position: relative;
+		padding:10px;
+		width: 60%;
+	}
+
+	.p-in .left img {
+		max-width: 100%;
+		box-shadow: 0 0 60px rgba(255, 255, 255, .3);
+		border: 10px solid rgba(0, 0, 0, .01);
+		border-radius: 8px;
+	}
+
+	.p-in .right {
+		padding:10px 40px 10px 20px;
+		width: 40%;
+	}
+
+	.p-in .right h2 {
+		margin-bottom: 20px;
+		font-size: 28px;
+		font-weight: 400;
+	}
+
+	.p-in .right h4 {
+		margin-bottom: 17px;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.2;
+	}
+
+	.p-in .right p {
+		margin-bottom: 10px;
+	}
+
+	.panel-menu {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100px;
+			background-color: #191c22;
+			color: #69a7b3;
+			min-height: 100vh;
+			z-index: 88;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100vh;
+			max-height: 100vh;
+			letter-spacing: 0;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.panel-menu li {
+			border-bottom: 1px solid #000;
+			text-align: center;
+			position: relative;
+		}
+
+		.panel-menu li:first-of-type {
+			margin-top: 98px;
+		}
+
+		.panel-menu li .button {
+			padding: 8px 5px 8px 5px;
+			font-size: 12px;
+			line-height: 1;
+			display: block;
+			cursor: pointer;
+			border: none;
+			background: none;
+			color: inherit;
+			transition: all .8s ease-in-out;
+		}
+		.panel-menu li .button.active {
+			color: #fff;
+		}
+		.panel-menu li .button * {
+			pointer-events: none;
+		}
+		.panel-menu li .button span {
+			display: block;
+		}
+
+		.panel-menu li .button span.fico {
+			font-size: 32px;
+			margin-bottom: 2px;
+		}
+
+		nav, .header.alpha nav {
+			background-color:#191c22!important;
+			/*box-shadow: 0 0 5px #040404;*/
+		}
+
+		.header .in {
+			width: 96%!important;
+			max-width: unset!important;
+		}
+
+		footer {
+			padding-left:150px!important;
+		}
+
+		.mCS-autoHide:hover>.mCustomScrollBox>.mCSB_scrollTools, .mCS-autoHide:hover>.mCustomScrollBox~.mCSB_scrollTools, .mCustomScrollBox:hover>.mCSB_scrollTools, .mCustomScrollBox:hover~.mCSB_scrollTools, .mCustomScrollbar>.mCustomScrollBox>.mCSB_scrollTools.mCSB_scrollTools_onDrag, .mCustomScrollbar>.mCustomScrollBox~.mCSB_scrollTools.mCSB_scrollTools_onDrag {
+			opacity: 0!important;
+		}
+	</style>
+
+	
+
+</head>
+
+<body class="is-home">
+	
+	<!-- <div id="pjs" class="pjs"></div> -->
+
+	<header class="header">
+		<div class="top">
+			<div class="in">
+				<div class="contact">
+					<div class="tel">
+						<span class="icon-tel"></span>
+						<a href="">+0987654321</a>
+					</div>
+					<div class="email">
+						<span class="icon-email"></span>
+						<a href="">info@alisatm.com</a>
+					</div>
+				</div>
+				<button type="button" class="get-c">Получить консультацию</button>
+			</div>
+		</div>
+		
+		<nav class="nav">
+			<div class="in">
+				<a class="icon-logo" href="/"><span></span></a>
+				<div class="hamb">
+					<div class="btn-line"></div>
+					<div class="btn-line"></div>
+					<div class="btn-line"></div>
+				</div>
+				<ul class="menu">
+					<li><a href="#s1">Продукт</a>
+					<li><a href="#s2">Цены</a>
+					<li><a href="#s3">Отзывы</a>
+					<li><a href="">Партнерам</a>
+					<li><a href="">Блог</a>
+					<li><a href="">Контакты</a>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+
+	<section class="panel section pbg" data-panel="1" data-style="#009fbc">
+		<div class="p-in">
+			<div class="left">
+				<img src="img/1.jpg" alt="">
+			</div>
+
+			<div class="right">
+				<h2>О системе</h2>
+
+				<h4>Задача системы Alisa TM — обеспечить качественно новый уровень работы всем, кто занят в переводческом бизнесе.</h4>
+
+				<p>С помощью нашей системы сотни бюро переводов привлекают клиентов, снижают расходы, управляют качеством работ, автоматизируют бизнес-процессы и получают все необходимые отчеты о показателях работы компаний.</p>
+
+				<p></p>Alisa TM — удобная система. В ней можно зарегистрировать новую компанию и начать работать «с нуля», либо мигрировать со всеми клиентами и документами существующего бюро переводов!</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="2" data-style="#0077bc">
+		<div class="p-in">
+			Управление заказами
+
+			Используйте все преимущества проектного управления
+
+			Alisa TM позволяет в несколько кликов принять заявку на перевод от клиента, создать из заявки проект, разбить проект на отдельные задачи со сроками исполнения, назначить ответственных лиц и поручить задачи штатным сотрудникам или фрилансерам.
+
+			В базе системы находится 4000+ переводчиков-фрилансеров со всего мира, работа с которыми позволяет существенно снизить себестоимость переводов.
+			
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="3" data-style="#005281">
+		<div class="p-in">
+			Финансы
+
+			Легко управляйте финансами компании
+
+			Финансовый модуль Alisa TM не просто ведет учет доходов и расходов компании. Он позволяет оперативно закрывать сделки, оплачивать работу фрилансеров, отслеживать динамику поступления средств, а также видеть подробный финансовый отчет по филиалам, направлениям, языкам и менеджерам.
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="4" data-style="#014d8e">
+		<div class="p-in">
+			CRM
+
+			Не теряйте потенциальных клиентов
+
+			CRM-модуль системы Alisa TM разработан специально для бюро переводов. Он позволяет вести клиента от «холодного звонка» или запроса на оценку стоимости перевода до закрытия отдельной сделки или повторных продаж услуг компании.
+
+			На каждом этапе руководство Бюро переводов может оценить эффективность работы менеджеров и прогнозировать стоимость привлечения клиента и возможный доход от работы с ним.
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="5" data-style="#4050b7">
+		<div class="p-in">
+			Контроль сотрудников
+
+			Грамотно распределяйте нагрузку по сотрудникам
+
+			Модуль управления ресурсами системы Alisa TM распределяет нагрузку между штатными и удаленными сотрудниками компании для обеспечения качественного перевода в нужные сроки по минимальной себестоимости. Корректируйте нагрузку в зависимости от результатов работы каждого отдельного сотрудника и управляйте рабочим временем персонала.
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="6" data-style="#233189">
+		<div class="p-in">
+			Контроль качества
+
+			Обеспечивайте высокое качество перевода
+
+			Alisa TM защитит ваши проекты от случайных и намеренных ошибок.
+
+			Каждая задача, выполненная штатным или удаленным переводчиком, будет сначала проверена автоматически, а потом направлена для утверждения менеджеру проекта. При этом фиксируются все изменения в статусах задачи и отдельных документов.
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="7" data-style="#110d42">
+		<div class="p-in">
+			Бизнес-анализ
+
+			Получайте отчеты о показателях эффективности работы в один клик!
+
+			Используйте стандартные отчеты бизнес-аналитики или создавайте собственные KPI, чтобы видеть полную картину работы вашего бизнеса и отслеживать динамику важнейших показателей эффективности.
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="8" data-style="#4050b7">
+		<div class="p-in">
+			Интеграция и подключения
+
+			Все инструменты в одном месте
+
+			Подключите все необходимые для Вас инструменты в пару кликов и управляйте ими прямо из панели инструментов нашего сервиса
+		</div>
+	</section>
+
+	<section class="panel section" data-panel="9" data-style="#6b79d2">
+		<div class="p-in">
+			Настройка бизнес процессов
+
+			Решайте нестандартные задачи
+
+			Создавайте собственные правила на уровне всей компании или отдельных ее проектов. Управляйте бизнес-процессами в зависимости от ресурсов и требований клиентов. Оценивайте и внедряйте «лучшие практики», чтобы обеспечивать высокое качество переводов с минимальными расходами.
+		</div>
+	</section>
+		
+
+	<main class="panel">
+		<section class="ask" data-src="img/bg/main-bg.jpg" style="background-color: #0f1c37;">
+			<div class="in">
+				<h2 class="h2 white">Остались вопросы?</h2>
+
+				<div class="c-line"></div>
+
+				<form action="" method="post" class="m-form">
+					<p class="a-info"><span class="bold">заполняйте форму</span>, и наш менеджер<br> проведет для Вас <span class="bold">бесплатную консультацию!</span></p>
+
+					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваше имя"></div>
+					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
+					<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
+					
+					<div style="margin-top:40px"><button class="btn thanks">Получить консультацию</button></div>
+				</form>
+			</div>
+		</section>
+
+	</main>
+
+
+	<footer class="panel">
+		<div class="in">
+			<div class="f-nav">
+				<ul>
+					<li><a href="">Блог</a>
+					<li><a href="">Для партнёров</a>
+					<li><a href="">Цены</a>
+					<li><a href="">О компании</a>
+					<li><a href="">Кейсы</a>
+					<li><a href="">Контакты</a>
+				</ul>
+			</div>
+
+			<div class="social">
+				<a href="https://www.facebook.com/alisatmc/" target="_blank"><span class="icon-facebook"></span></a>
+				<a href="https://www.youtube.com/channel/UCyE3So0E_uVI92zTx-98mYA/featured" target="_blank"><span class="icon-youtube"></span></a>
+				<a href="https://www.linkedin.com/company-beta/22338917/" target="_blank"><span class="icon-linkedin"></span></a>
+			</div>
+
+			<div class="f-contact">
+				<button type="button" class="thanks">Перезвоните мне</button>
+			</div>
+		</div>
+	</footer>
+
+
+	<ul class="panel-menu">
+		<li><div class="button" data-panel="1"><span class="fico fico-about-system"></span><span>О системе</span></div>
+		<li><div class="button" data-panel="2"><span class="fico fico-orders-manage"></span><span>Управление заказами</span></div>
+		<li><div class="button" data-panel="3"><span class="fico fico-finances"></span><span>Финансы</span></div>
+		<li><div class="button" data-panel="4"><span class="fico fico-crm"></span><span>CRM</span></div>
+		<li><div class="button" data-panel="5"><span class="fico fico-control-employees"></span><span>Контроль сотрудников</span></div>
+		<li><div class="button" data-panel="6"><span class="fico fico-control-quality"></span><span>Контроль качества</span></div>
+		<li><div class="button" data-panel="7"><span class="fico fico-business-analize"></span><span>Бизнес-анализ</span></div>
+		<li><div class="button" data-panel="8"><span class="fico fico-integration"></span><span>Интеграция и подключения</span></div>
+		<li><div class="button" data-panel="9"><span class="fico fico-busines-setup"></span><span>Настройка бизнес процессов</span></div>
+	</ul>
+
+	<!--  modals -->
+
+	<div id="mod-consultation" class="white-popup mfp-hide">
+		<form action="" method="post" class="m-form">
+			<p class="a-info" style="margin:20px 0"><span class="bold">заполняйте форму</span>, и наш менеджер<br> проведет для Вас <span class="bold">бесплатную консультацию!</span></p>
+
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваше имя"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
+			
+			<div style="margin-top:40px"><button class="btn thanks">Получить консультацию</button></div>
+		</form>
+	</div>
+
+
+	<div id="mod-more" class="white-popup mfp-hide">
+		<p style="font-size: 14px; font-weight: 600; color: #00cbff;">ПРОБЛЕМА</p>
+		<p class="a-info" style="margin: 10px 0 20px 0;"></p>
+		<p style="font-size: 14px; font-weight: 600;color: #00d600;">РЕШЕНИЕ</p>
+		<p class="a-text" style="margin: 10px 0;"></p>
+		<div style="margin-top:40px"><button class="btn pr">Хочу также</button></div>	
+	</div>
+
+
+	<div id="mod-problem" class="white-popup mfp-hide">
+		<form action="" method="post" class="m-form">
+			<p class="a-info" style="margin:20px 0">Оставьте заявку на бесплатную консультацию, где менеджер расскажет про решение вашей проблемы</p>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваше имя"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш телефон"></div>
+			<div class="a-inp"><input type="text" name="uemail" placeholder="Введите ваш E-mail"></div>
+			<div style="margin-top:40px"><button class="btn thanks">Оставить заявку</button></div>
+		</form>
+	</div>
+
+	<div id="mod-thanks" class="white-popup mfp-hide">
+		<p class="a-info" style="margin: 20px 0; font-size: 28px">Спасибо за заявку</p>
+		<p>Мы свяжемся с Вами в ближайшее время</p>
+	</div>
+
+<!--  end modals -->
+
+<!-- <script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+<script src="libs/particles/particles.min.js"></script> -->
+<!-- <script src="libs/particles/demo/js/app.js"></script> -->
+<!-- <script src="libs/modal/jquery.magnific-popup.min.js"></script>
+<script src="libs/youtube/jquery.inview.min.js"></script>
+<script src="libs/youtube/jquery.youtube-inview-autoplay.js"></script> -->
+
+<link rel="stylesheet" href="css/libs.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.min.css">
+
+<script src="js/libs.min.js"></script>
+<script src="libs/lazyload/lazyload.min.js"></script>
+<script src="js/main.min.js"></script>
+
+<script src="libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="libs/scroll/panelsnap.js" defer></script>
+<script>
+
+	(function($) {
+		$(window).on("load", function() {
+			
+			$(".panel-menu").mCustomScrollbar({
+				theme:"minimal"
+			});
+		});
+	})(jQuery);
+
+  var menu, menuItems, panelSnapInstance;
+
+  document.addEventListener("DOMContentLoaded", function () {
+	menu = document.querySelector('.panel-menu');
+	menuItems = menu.querySelectorAll('li div.button');
+
+	//console.log(menuItems);
+
+	panelSnapInstance = new PanelSnap({
+		//container: document.querySelector('.main'),
+		directionThreshold: 50,
+		panelSelector: '.panel',
+	});
+	panelSnapInstance.on('activatePanel', activateMenuItem);
+	panelSnapInstance.on('snapStart', snapStart);
+
+	menuItems.forEach(function (menuItem) {
+	  menuItem.addEventListener('click', onButtonClick);
+	})
+  });
+
+  function changeBg(panel) {
+	var bg = panel.getAttribute('data-style'); //var ff = '#000';
+	bg && (document.body.style.background = bg);//'radial-gradient(ellipse at center, ' + ff + ' 0%, ' + bg + ' 100%)');
+	//background: radial-gradient(ellipse at center, rgba(107,95,89,1) 0%,rgba(54,47,45,1) 100%);
+  }
+
+  function snapStart(panel) {
+	changeBg(panel);
+  }
+
+  function activateMenuItem(panel) {
+	changeBg(panel);
+	menuItems.forEach(function (menuItem) {
+	  menuItem.classList.remove('active');
+	  menuItem.style.background = 'transparent';
+  	});
+	  //console.log(panel);
+	var panelName = panel.getAttribute('data-panel');
+	var menuItem = menu.querySelector('li div[data-panel="' + panelName + '"]');
+	var bg = panel.getAttribute('data-style');
+	bg && (menuItem.style.background = bg);
+	menuItem && (menuItem.classList.add('active'));
+  }
+
+  function onButtonClick(e) {
+	  //console.log(e.target);
+	var panelName = e.target.getAttribute('data-panel')
+	var panel = document.querySelector('section[data-panel="' + panelName + '"]');
+	panelSnapInstance.snapToPanel(panel);
+  }
+</script>
+</body>
+</html>

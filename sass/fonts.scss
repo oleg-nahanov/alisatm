@@ -1,0 +1,6 @@
+@import "mixins";
+@import "icons";
+
+@include font-face("Alisa", "fonts/Alisa/alisa");
+@include font-face("Open Sans", "fonts/OpenSansRegular/OpenSansRegular");
+@include font-face("Open Sans", "fonts/OpenSansBold/OpenSansBold", bold);

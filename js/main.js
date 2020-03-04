@@ -211,7 +211,7 @@ lazyload();
 	        });
 	    };
 
-	    navbarFixed();
+	    //navbarFixed();
 
 	    var cs = $(".company-slider"), tl = $(".tasks-list"), wl = $(".works-list"), el = $(".emp-list"), 
 	    navs = ['<span class="icon-arrowleft"></span>', '<span class="icon-arrowright"></span>'];;
@@ -253,6 +253,7 @@ lazyload();
 			dots: false,
 			items: 1,
 			autoWidth: false,
+			autoHeight: true,
 			singleItem: true,
 			autoplay: false,
 			navSpeed: 800
@@ -342,7 +343,7 @@ lazyload();
 
 		$('.pjs').each(function (e) {
 			$(this).attr('id', 'lf_e-' + e);
-			//setTimeout(function() { particlesJS('lf_e-' + e, options); }, e*1000);
+			setTimeout(function() { particlesJS('lf_e-' + e, options); }, e*1000);
 			
 			//var nc = cloneCanvas(document.querySelector("#particles-js canvas"));
 			//$(this).append(nc);

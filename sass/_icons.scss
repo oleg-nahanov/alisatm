@@ -1,0 +1,98 @@
+@font-face {
+	font-family: "Icons";
+	src: url('fonts/FontIcons/Icons.eot');
+	src: url('fonts/FontIcons/Icons.eot?#iefix') format('eot'),
+		url('fonts/FontIcons/Icons.woff2') format('woff2'),
+		url('fonts/FontIcons/Icons.woff') format('woff'),
+		url('fonts/FontIcons/Icons.ttf') format('truetype'),
+		url('fonts/FontIcons/Icons.svg#Icons') format('svg');
+}
+
+@mixin fico-styles {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%fico {
+	@include fico-styles;
+}
+
+@function fico-char($filename) {
+	$char: "";
+
+	@if $filename == about-system {
+		$char: "\E001";
+	}
+	@if $filename == busines-setup {
+		$char: "\E002";
+	}
+	@if $filename == business-analize {
+		$char: "\E003";
+	}
+	@if $filename == control-employees {
+		$char: "\E004";
+	}
+	@if $filename == control-quality {
+		$char: "\E005";
+	}
+	@if $filename == crm {
+		$char: "\E006";
+	}
+	@if $filename == finances {
+		$char: "\E007";
+	}
+	@if $filename == integration {
+		$char: "\E008";
+	}
+	@if $filename == orders-manage {
+		$char: "\E009";
+	}
+
+	@return $char;
+}
+
+@mixin fico($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %fico;
+		} @else {
+			@include fico-styles;
+		}
+		content: fico-char($filename);
+	}
+}
+
+.fico-about-system {
+	@include fico(about-system);
+}
+.fico-busines-setup {
+	@include fico(busines-setup);
+}
+.fico-business-analize {
+	@include fico(business-analize);
+}
+.fico-control-employees {
+	@include fico(control-employees);
+}
+.fico-control-quality {
+	@include fico(control-quality);
+}
+.fico-crm {
+	@include fico(crm);
+}
+.fico-finances {
+	@include fico(finances);
+}
+.fico-integration {
+	@include fico(integration);
+}
+.fico-orders-manage {
+	@include fico(orders-manage);
+}
